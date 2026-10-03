@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Account</title>
+
+<style>
+body{font-family:Arial;background:lightblue}
+form{width:350px;margin:80px auto;padding:20px;background:white}
+input{padding:8px;margin:7px;width:90%}
+.ok{color:green}.no{color:red}
+#rules{display:none}
+button{padding:8px 20px}
+</style>
+
+<script>
+function check(){
+ let e=document.getElementById("email").value;
+ let p=document.getElementById("pass").value;
+
+ document.getElementById("em").innerHTML =
+ e.includes("@")&&e.includes("capital letter")?"✓":"✗";
+
+ document.getElementById("r").innerHTML =
+ (p.length>=8?"✓":"✗")+" Password must contain 8 characters<br>"+
+ (/[A-Z]/.test(p)?"✓":"✗")+" One uppercase letter<br>"+
+ (/[a-z]/.test(p)?"✓":"✗")+" One lowercase letter<br>"+
+ (/[0-9]/.test(p)?"✓":"✗")+" One number";
+}
+
+function show(){
+ let x=document.getElementById("rules");
+ x.style.display=x.style.display=="block"?"none":"block";
+}
+</script>
+
+</head>
+
+<body>
+
+<form>
+
+<h2>Create Email Account</h2>
+
+Email:
+<input type="email" id="email" oninput="check()">
+<span id="em"></span>
+
+Password:
+<input type="password" id="pass" oninput="check()">
+
+<div onclick="show()" style="color:blue;cursor:pointer">
+Password Conditions ▼
+</div>
+
+<div id="rules">
+<p id="r">✗ Password must contain 8 characters</p>
+</div>
+
+<button type="submit">Submit</button>
+<button type="reset">Cancel</button>
+
+</form>
+
+</body>
+</html>

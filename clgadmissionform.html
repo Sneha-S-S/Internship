@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>College Admission Form</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    background-color:rgb(232, 184, 159);
+}
+
+form {
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+}
+
+input, select, textarea {
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: green;
+    color: rgb(7, 22, 13);
+}
+
+#submit:disabled {
+    background-color: lightgray;
+}
+
+button[type="reset"] {
+    background-color: lightcoral;
+    color: rgb(183, 77, 77);
+}
+</style>
+
+<script>
+
+function course() {
+    document.getElementById("other").style.display =
+    document.getElementById("c").value == "others"
+    ? "inline" : "none";
+}
+
+function agree() {
+    document.getElementById("submit").disabled =
+    !document.getElementById("check").checked;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1 align="center" style="background-color: rgb(194, 182, 240);">COLLEGE ADMISSION FORM</h1>
+
+<form>
+
+Student Name:
+<input type="text"><br>
+
+Date of Birth:
+<input type="date"><br>
+
+Gender:
+<input type="radio" name="g"> Male
+<input type="radio" name="g"> Female
+<br>
+
+Email:
+<input type="email"><br>
+
+Phone:
+<input type="tel"><br>
+
+Address:<br>
+<textarea rows="3"></textarea>
+<br>
+
+Course:
+
+<select id="c" onchange="course()">
+    <option>Select Course</option>
+    <option>BCA</option>
+    <option>B.Com</option>
+    <option>BA</option>
+    <option>B.Sc</option>
+    <option>BBM</option>
+    <option value="others">Others</option>
+</select>
+
+<input type="text" id="other"
+placeholder="Enter course"
+style="display:none">
+
+<br>
+
+Qualification:
+
+<select>
+    <option>PUC</option>
+    <option>12th Standard</option>
+    <option>Diploma</option>
+</select>
+
+<br>
+
+Upload Photo:
+<input type="file">
+<br>
+
+<input type="checkbox" id="check" onchange="agree()">
+
+I declare that the information is correct.
+
+<br><br>
+
+<button type="submit" id="submit" disabled>
+Submit
+</button>
+
+<button type="reset">
+Clear
+</button>
+
+</form>
+
+</body>
+</html>
