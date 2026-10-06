@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scholarship Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-box {
+            width: 550px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        label {
+            display: inline-block;
+            width: 170px;
+            margin-bottom: 12px;
+        }
+
+        input, select, textarea {
+            width: 270px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 120px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h2>🎓 Scholarship Application Form</h2>
+
+    <form>
+
+        <label>Student Name:</label>
+        <input type="text" name="name" required>
+        <br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required>
+        <br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+        <br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        <label>Course:</label>
+        <select name="course">
+            <option>Select Course</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>BCOM</option>
+            <option>BA</option>
+            <option>B.Sc</option>
+        </select>
+        <br>
+
+        <label>College Name:</label>
+        <input type="text" name="college" required>
+        <br>
+
+        <label>Year of Study:</label>
+        <select name="year">
+            <option>Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+        </select>
+        <br>
+
+        <label>CGPA / Percentage:</label>
+        <input type="number" name="marks" step="0.01" required>
+        <br>
+
+        <label>Annual Family Income:</label>
+        <input type="number" name="income" required>
+        <br>
+
+        <label>Category:</label>
+        <select name="category">
+            <option>Select Category</option>
+            <option>General</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>Other</option>
+        </select>
+        <br>
+
+        <label>Scholarship Type:</label>
+        <select name="scholarship">
+            <option>Merit Scholarship</option>
+            <option>Government Scholarship</option>
+            <option>Sports Scholarship</option>
+            <option>Need Based Scholarship</option>
+        </select>
+        <br>
+
+        <label>Upload Documents:</label>
+        <input type="file" name="documents">
+        <br>
+
+        <label>Why do you need this scholarship?</label>
+        <textarea rows="4" placeholder="Enter your reason"></textarea>
+        <br>
+
+        <label>
+            <input type="checkbox" required>
+            I agree to the terms and conditions
+        </label>
+
+        <div class="buttons">
+            <input type="submit" value="Apply Now">
+            <input type="reset" value="Cancel">
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
