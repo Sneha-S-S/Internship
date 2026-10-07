@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaming Tournament Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #3f3b58;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: #1c1c2e;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00ffff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffff;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #29293d;
+            color: white;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .register {
+            background: #00ffff;
+            color: black;
+        }
+
+        .reset {
+            background: #ff3366;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Gaming Tournament</h2>
+    <p style="text-align:center;">Register Now & Show Your Skills!</p>
+
+    <form>
+
+        <label>Player Name:</label>
+        <input type="text" name="player" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}"
+               placeholder="10-digit mobile number" required>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="13" max="60" required>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+
+        <label>Select Game:</label>
+        <select name="game" required>
+            <option value="">-- Choose Game --</option>
+            <option>BGMI</option>
+            <option>Free Fire</option>
+            <option>temple run</option>
+            <option>Call of Duty</option>
+            <option>Fortnite</option>
+        </select>
+
+        <label>Game Mode:</label>
+        <select name="mode" required>
+            <option value="">-- Select Mode --</option>
+            <option>Solo</option>
+            <option>Duo</option>
+            <option>Squad</option>
+        </select>
+
+        <label>Team Name:</label>
+        <input type="text" name="team" placeholder="Enter team name">
+
+        <label>Gaming Platform:</label>
+        <select name="platform" required>
+            <option value="">-- Select Platform --</option>
+            <option>Mobile</option>
+            <option>PC</option>
+            <option>Console</option>
+        </select>
+
+        <label>Tournament Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Gaming Experience:</label>
+        <select name="experience" required>
+            <option value="">-- Select Experience --</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Professional</option>
+        </select>
+
+        <label>Player Message:</label>
+        <textarea name="message" rows="3"
+                  placeholder="Tell us about yourself"></textarea>
+
+        <label>
+            <input type="checkbox" required>
+            I agree to the Terms and Conditions.
+        </label>
+
+        <div class="buttons">
+            <button type="submit" class="register">Register </button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
